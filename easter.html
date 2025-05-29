@@ -19,10 +19,13 @@
 
     <script>
         // Easter egg: Konami code reveals rainbow background
-        let keys = [];
+        let buffer = "";
         document.addEventListener('keydown', (e) => {
-            keys.push(e.key);
-            if (keys.join(',').includes('ArrowUp,ArrowUp,ArrowDown,ArrowDown')) {
+            buffer += e.key.toLowerCase();
+
+            if (buffer.length > 20) buffer = buffer.slice(-20); //avoid buffer growing forever
+
+            if (buffer.includes("kangaroo")) { //gta san adreas cheat code for megajump
                 document.body.style.background = 'linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet)';
             }
         });
