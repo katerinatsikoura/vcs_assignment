@@ -1,0 +1,4 @@
+d46d6bc change keybind for 3rd easter egg
+bf6f521 fix rainbow theme for 3rd easter egg
+dc4b2b2 change egg color
+8ec3639 Initial commit
